@@ -1,0 +1,11 @@
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+  }

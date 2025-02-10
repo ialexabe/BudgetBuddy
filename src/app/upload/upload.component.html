@@ -1,0 +1,16 @@
+<div class="upload-container">
+    <input type="file" (change)="onFileSelected($event)" accept=".xls,.xlsx" />
+    <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+  </div>
+  
+  <p *ngIf="uploadMessage">{{ uploadMessage }}</p>
+  
+  <!-- Display table preview -->
+  <table *ngIf="excelData.length > 0" border="1">
+    <tr>
+      <th *ngFor="let header of excelData[0]">{{ header }}</th>
+    </tr>
+    <tr *ngFor="let row of excelData.slice(1)">
+      <td *ngFor="let cell of row">{{ cell }}</td>
+    </tr>
+  </table>
